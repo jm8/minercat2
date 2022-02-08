@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://icon.gd" type="Script" id=2]
+[ext_resource path="res://font.tres" type="BitmapFont" id=3]
+
+[sub_resource type="Theme" id=1]
+/fonts/font = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,3 +15,15 @@ script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 134.0
+margin_top = -42.0
+margin_right = 365.0
+margin_bottom = 49.0
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "hello world"
+__meta__ = {
+"_edit_use_anchors_": false
+}
