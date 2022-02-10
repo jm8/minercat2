@@ -25,11 +25,11 @@ def get_prefix(name):
 for target in project["targets"]:
     if "costumes" not in target: continue
     #if target["name"] != 'Visuals': continue
-    if target["name"] != 'Visuals':
-        folder = target["name"]
-    else:
-        folder = get_prefix(target["name"])
     for costume in target["costumes"]:
+        if target["name"] != 'Visuals':
+            folder = target["name"]
+        else:
+            folder = get_prefix(costume["name"])
         try:
             os.makedirs(f'minercat2_assets_renamed/{folder}')
         except FileExistsError:
