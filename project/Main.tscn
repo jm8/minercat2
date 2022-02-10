@@ -17,13 +17,12 @@ script = ExtResource( 2 )
 current = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 134.0
-margin_top = -42.0
-margin_right = 365.0
-margin_bottom = 49.0
+margin_left = 174.0
+margin_top = -70.0
+margin_right = 405.0
+margin_bottom = 21.0
 theme = SubResource( 1 )
 custom_fonts/font = ExtResource( 3 )
-text = "hello world"
 __meta__ = {
 "_edit_use_anchors_": false
 }
