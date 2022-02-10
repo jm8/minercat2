@@ -1,7 +1,7 @@
 [gd_resource type="BitmapFont" load_steps=3 format=2]
 
-[ext_resource path="res://cutter_custom_letters.gd" type="Script" id=1]
-[ext_resource path="res://letters.png" type="Texture" id=2]
+[ext_resource path="res://font/cutter_custom_letters.gd" type="Script" id=1]
+[ext_resource path="res://font/letters.png" type="Texture" id=2]
 
 [resource]
 textures = [ ExtResource( 2 ) ]

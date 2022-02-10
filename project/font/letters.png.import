@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/letters.png-510392552d99104451d39495710bd7b0.stex"
+path="res://.import/letters.png-e26054f9b3e014707dc6b7b67f514db8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://letters.png"
-dest_files=[ "res://.import/letters.png-510392552d99104451d39495710bd7b0.stex" ]
+source_file="res://font/letters.png"
+dest_files=[ "res://.import/letters.png-e26054f9b3e014707dc6b7b67f514db8.stex" ]
 
 [params]
 
