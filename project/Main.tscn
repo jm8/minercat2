@@ -1,26 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
-
-[sub_resource type="GDScript" id=2]
-script/source = "extends Sprite
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-func _process(delta):
-	# 1 full rotation per second
-	rotate(2 * PI * delta)
-"
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://CameraFollow.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="icon" type="Sprite" parent="."]
-texture = SubResource( 1 )
-script = SubResource( 2 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+script = ExtResource( 2 )
+follow_path = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -150 )
