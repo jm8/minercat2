@@ -17,7 +17,7 @@ follow_path = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -150 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="KinematicBody2D" type="StaticBody2D" parent="."]
 
 [node name="B80799Aef39922Aacee47Bc5726E5A2f" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 50, 63 )
