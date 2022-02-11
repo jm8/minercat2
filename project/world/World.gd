@@ -12,6 +12,8 @@ func _ready():
 	
 	rng = RandomNumberGenerator.new()
 	
+	assert(cell_size * transform.get_scale() == Vector2(Game.block_size, Game.block_size))
+		
 	for layer in range(25):
 		generate_layer(layer)
 

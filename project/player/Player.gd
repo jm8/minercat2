@@ -11,6 +11,8 @@ const jump_force = 18
 signal snap_camera
 
 func _ready():
+	position.x = Game.block_size * Game.world_size / 2
+	position.y = -150
 	emit_signal("snap_camera")
 	
 func _physics_process(dt):
