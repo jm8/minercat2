@@ -1,0 +1,118 @@
+{
+    "blocks": [
+        {
+            "id": 0,
+            "name": "air"
+        },
+        {
+            "id": 1,
+            "name": "grass"
+        },
+        {
+            "id": 2,
+            "name": "dirt"
+        },
+        {
+            "id": 3,
+            "name": "light_stone"
+        },
+        {
+            "id": 4,
+            "base": "light_stone",
+            "name": "coal_ore"
+        },
+        {
+            "id": 5,
+            "base": "light_stone",
+            "name": "iron_ore"
+        },
+        {
+            "id": 6,
+            "base": "light_stone",
+            "name": "silver_ore"
+        },
+        {
+            "id": 7,
+            "base": "light_stone",
+            "name": "copper_ore"
+        },
+        {
+            "id": 9999999,
+            "name": "bedrock"
+        }
+    ],
+    "levels": [
+        {
+            "range": {
+                "until": 5
+            },
+            "tries": [
+                {
+                    "block": "air"
+                }
+            ]
+        },
+        {
+            "range": {
+                "from": 5,
+                "until": 6
+            },
+            "tries": [
+                {
+                    "spawnlayer": {
+                        "center": "bedrock",
+                        "normal": "grass"
+                    }
+                }
+            ]
+        },
+        {
+            "range": {
+                "from": 6,
+                "until": 7
+            },
+            "tries": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "range": {
+                "from": 7,
+                "until": 24
+            },
+            "tries": [
+                {
+                    "rarity": 10,
+                    "block": "light_stone:coal_ore"
+                },
+                {
+                    "rarity": 12,
+                    "block": "light_stone:iron_ore"
+                },
+                {
+                    "rarity": 14,
+                    "block": "light_stone:silver_ore"
+                },
+                {
+                    "rarity": 16,
+                    "block": "light_stone:copper_ore"
+                },
+                {
+                    "block": "light_stone"
+                }
+            ]
+        },
+        {
+            "range": {
+                "from": 24
+            },
+            "tries": [
+                {
+                    "block": "bedrock"
+                }
+            ]
+        }
+    ]
+}

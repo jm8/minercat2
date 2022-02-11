@@ -16,5 +16,5 @@ func _process(delta):
 	constrain_position()
 
 func constrain_position():
-	if position.y > 0:
+	if position.y < 0:
 		position.y = 0
