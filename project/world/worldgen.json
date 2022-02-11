@@ -1,46 +1,4 @@
 {
-    "blocks": [
-        {
-            "id": 0,
-            "name": "air"
-        },
-        {
-            "id": 1,
-            "name": "grass"
-        },
-        {
-            "id": 2,
-            "name": "dirt"
-        },
-        {
-            "id": 3,
-            "name": "light_stone"
-        },
-        {
-            "id": 4,
-            "base": "light_stone",
-            "name": "coal_ore"
-        },
-        {
-            "id": 5,
-            "base": "light_stone",
-            "name": "iron_ore"
-        },
-        {
-            "id": 6,
-            "base": "light_stone",
-            "name": "silver_ore"
-        },
-        {
-            "id": 7,
-            "base": "light_stone",
-            "name": "copper_ore"
-        },
-        {
-            "id": 9999999,
-            "name": "bedrock"
-        }
-    ],
     "levels": [
         {
             "range": {
