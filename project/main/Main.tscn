@@ -1,12 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://world/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://camera/CameraFollow.gd" type="Script" id=3]
 [ext_resource path="res://mining/crosshair.png" type="Texture" id=4]
-[ext_resource path="res://mining/Crosshair.gd" type="Script" id=5]
+[ext_resource path="res://mining/Mining.gd" type="Script" id=5]
 [ext_resource path="res://mining/block marker ting.png" type="Texture" id=6]
-[ext_resource path="res://mining/BlockMarker.gd" type="Script" id=7]
 [ext_resource path="res://touchscreen_controls/TouchscreenControls.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
@@ -24,17 +23,19 @@ follow_offset = Vector2( 0, 18 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -150 )
 
-[node name="Crosshair" type="Sprite" parent="."]
-scale = Vector2( 1.5, 1.5 )
-z_index = 10
-texture = ExtResource( 4 )
-script = ExtResource( 5 )
+[node name="TouchscreenControls" parent="." instance=ExtResource( 8 )]
 
-[node name="BlockMarker" type="Sprite" parent="."]
+[node name="Mining" type="Node2D" parent="."]
+script = ExtResource( 5 )
+world_path = NodePath("../World")
+touchscreen_controls_path = NodePath("../TouchscreenControls")
+
+[node name="BlockMarker" type="Sprite" parent="Mining"]
 scale = Vector2( 4, 4 )
 z_index = 10
 texture = ExtResource( 6 )
-script = ExtResource( 7 )
-world_path = NodePath("../World")
 
-[node name="TouchscreenControls" parent="." instance=ExtResource( 8 )]
+[node name="Crosshair" type="Sprite" parent="Mining"]
+scale = Vector2( 1.5, 1.5 )
+z_index = 10
+texture = ExtResource( 4 )
